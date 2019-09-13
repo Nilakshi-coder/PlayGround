@@ -1,0 +1,31 @@
+public class StringPool_1_0 {
+    public static void main(String args[]){
+        String a = "abc";
+        String b = "abc";
+        String c = new String("abc");
+        String d = new String("abc").intern();
+        String e = c.intern();
+
+        System.out.println("a=\""+a+"\"\tb=\""+b+"\"\tc=\""+c+"\"\td=\""+d+"\"\te=\""+e+"\"");
+
+        if(a==b)
+            System.out.println("a & b has same reference");
+        else
+            System.out.println("a & b doesn't have same reference");
+
+        if(a==c)
+            System.out.println("a & c has same reference");
+        else
+            System.out.println("a & c doesn't have same reference");
+
+        if(a==d)
+            System.out.println("a & d has same reference");
+        else
+            System.out.println("a & d doesn't have same reference");
+
+        if(a==e)
+            System.out.println("a & e has same reference");
+        else
+            System.out.println("a & e doesn't have same reference");
+    }
+}
